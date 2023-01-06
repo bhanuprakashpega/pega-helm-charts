@@ -101,7 +101,7 @@ global:
   # configuration under External Services
   tier:
     - name: "minikube"
-      nodeType: "Stream,BackgroundProcessing,WebUser,Search"
+      nodeType: "BackgroundProcessing,WebUser,Search"
 
       service:
         port: 80
@@ -210,9 +210,9 @@ hazelcast:
 # Stream (externalized Kafka service) settings.
 stream:
   # Disabled by default, when enabled, your deployment no longer uses the "Stream" node type.
-  enabled: false
+  enabled: true
   # Provide externalized Kafka service broker urls.
-  bootstrapServer: ""
+  bootstrapServer: "kafka.mypega.svc.cluster.local:9092"
   # Provide Security Protocol used to communicate with kafka brokers. Supported values are: PLAINTEXT, SSL, SASL_PLAINTEXT, SASL_SSL.
   securityProtocol: PLAINTEXT
   # If required, provide trustStore certificate file name

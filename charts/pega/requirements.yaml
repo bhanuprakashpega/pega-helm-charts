@@ -6,3 +6,7 @@ dependencies:
   version: "0.13.3"
   repository: https://charts.helm.sh/incubator
   condition: cassandra.enabled
+- name: kafka
+  version: "3.3.1"
+  repository: https://charts.bitnami.com/bitnami
+  condition: kafka.enabled
